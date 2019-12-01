@@ -10,7 +10,7 @@ export const getMovies = async (limit, rating) => {
     if (rating>0) {
         REQUEST_URL += `&minimum_rating=${rating}`;
     }
-
+ 
     const res = await fetch(`${REQUEST_URL}`);
     const json = await res.json();
     return json.data.movies;
