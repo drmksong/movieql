@@ -1,7 +1,7 @@
 
 import { people, getById, addPerson, deletePerson } from "./db"
 
-const resolvers = {
+export const resolvers = {
     Query: {
         people: () => people,
         person: (_, {id}) =>  {return getById(id)}
@@ -12,4 +12,4 @@ const resolvers = {
     }
 };
 
-export default resolvers;
+//export default resolvers;
